@@ -6,13 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marriage Registration Pune | Official Advocate Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --flower-marigold: #ff9933;
+            --flower-jasmine: #fffcf2;
+            --flower-rose: #e11d48;
+            --flower-leaf: #166534;
+            --flower-gold: #d4af37;
+        }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--flower-jasmine);
+            color: #1a1a1a;
         }
         h1, h2, h3, .font-serif {
             font-family: 'Playfair Display', serif;
+        }
+        .font-script {
+            font-family: 'Great Vibes', cursive;
+        }
+        /* Reliable SVG Pattern for subtle floral feel */
+        .floral-pattern {
+            background-color: #fffcf2;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10c2-2 5-2 7 0s2 5 0 7-5 2-7 0-5-2-7 0-2 5 0 7 5 2 7 0 2-2 5-2 7 0s2 5 0 7-5 2-7 0-5-2-7 0-2 5 0 7 5 2 7 0' fill='%23ff9933' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .btn-marigold {
+            background-color: var(--flower-marigold);
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(255, 153, 51, 0.39);
+        }
+        .btn-marigold:hover {
+            background-color: #fb923c;
+            transform: translateY(-2px);
+        }
+        .text-rose { color: var(--flower-rose); }
+        .text-marigold { color: var(--flower-marigold); }
+        .bg-jasmine { background-color: var(--flower-jasmine); }
+        
+        .wedding-gradient-soft {
+            background: linear-gradient(135deg, #ff9933 0%, #e11d48 100%);
         }
     </style>
 <script type="importmap">
@@ -27,7 +60,7 @@
 }
 </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="floral-pattern">
     <div id="root"></div>
 </body>
 </html>

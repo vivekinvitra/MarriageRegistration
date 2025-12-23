@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
           </p>
           <button 
             onClick={() => { setStatus('idle'); setFormData({ name: '', email: '', phone: '', description: '', captchaInput: '' }); generateCaptcha(); }}
-            className="bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-indigo-700 transition-all"
+            className="bg-orange-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-orange-700 transition-all"
           >
             Send Another Message
           </button>
@@ -64,24 +64,33 @@ const Contact: React.FC = () => {
 
   return (
     <div className="bg-slate-50 min-h-screen">
-      <section className="bg-slate-900 py-20 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 text-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop" 
+            alt="Flower decoration background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-slate-900/80 mix-blend-multiply"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">Get in Touch</h1>
-              <p className="text-slate-400 text-lg">
+              <p className="text-slate-300 text-lg">
                 Have questions about your marriage registration? Our legal experts are ready to help you navigate the process.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-slate-800 p-6 rounded-2xl flex flex-col gap-2">
-                <Phone className="text-indigo-400 mb-2" />
-                <div className="text-xs uppercase tracking-widest text-slate-500 font-bold">Call Support</div>
+              <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl flex flex-col gap-2 border border-white/20">
+                <Phone className="text-orange-400 mb-2" />
+                <div className="text-xs uppercase tracking-widest text-slate-400 font-bold">Call Support</div>
                 <div className="font-bold text-lg">+91 88888 88888</div>
               </div>
-              <div className="bg-slate-800 p-6 rounded-2xl flex flex-col gap-2">
-                <Mail className="text-indigo-400 mb-2" />
-                <div className="text-xs uppercase tracking-widest text-slate-500 font-bold">Email Us</div>
+              <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl flex flex-col gap-2 border border-white/20">
+                <Mail className="text-orange-400 mb-2" />
+                <div className="text-xs uppercase tracking-widest text-slate-400 font-bold">Email Us</div>
                 <div className="font-bold text-lg">info@marriageregistration.co.in</div>
               </div>
             </div>
@@ -90,32 +99,32 @@ const Contact: React.FC = () => {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 mb-24">
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-5">
+        <div className="bg-white rounded-3xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-5 border border-orange-100">
           {/* Contact Details Side */}
-          <div className="lg:col-span-2 bg-indigo-600 p-8 md:p-12 text-white">
+          <div className="lg:col-span-2 bg-orange-600 p-8 md:p-12 text-white">
             <h3 className="text-2xl font-serif font-bold mb-8">Office Location</h3>
             <div className="space-y-8">
               <div className="flex gap-4">
-                <div className="w-12 h-12 bg-indigo-500/50 rounded-xl flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center shrink-0">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-bold text-lg mb-1">Pune Main Office</div>
-                  <p className="text-indigo-100">Office No. 402, Shivajinagar Court Road, Near District Court, Pune 411005</p>
+                  <p className="text-orange-100">Office No. 402, Shivajinagar Court Road, Near District Court, Pune 411005</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="w-12 h-12 bg-indigo-500/50 rounded-xl flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center shrink-0">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-bold text-lg mb-1">Consultation Hours</div>
-                  <p className="text-indigo-100">Mon - Sat: 10:30 AM to 6:30 PM</p>
+                  <p className="text-orange-100">Mon - Sat: 10:30 AM to 6:30 PM</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-20 h-64 bg-indigo-400/20 rounded-2xl border border-indigo-400/30 flex items-center justify-center italic text-sm text-indigo-100 text-center px-8">
+            <div className="mt-20 h-64 bg-white/10 rounded-2xl border border-white/20 flex items-center justify-center italic text-sm text-orange-100 text-center px-8">
               "Providing reliable legal assistance to Pune's citizens for over a decade."
             </div>
           </div>
@@ -133,7 +142,7 @@ const Contact: React.FC = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                     placeholder="Enter full name"
                   />
                 </div>
@@ -145,7 +154,7 @@ const Contact: React.FC = () => {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                     placeholder="+91"
                   />
                 </div>
@@ -158,7 +167,7 @@ const Contact: React.FC = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                   placeholder="name@example.com"
                 />
               </div>
@@ -170,7 +179,7 @@ const Contact: React.FC = () => {
                   required
                   value={formData.description}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none"
                   placeholder="How can we help you?"
                 ></textarea>
               </div>
@@ -178,7 +187,7 @@ const Contact: React.FC = () => {
               <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
                 <label className="block text-sm font-bold text-slate-700 mb-4 uppercase tracking-wider">Spam Protection</label>
                 <div className="flex items-center gap-6">
-                  <div className="text-xl font-bold font-serif text-indigo-600 bg-white px-6 py-2 rounded-lg shadow-sm border border-slate-200 select-none">
+                  <div className="text-xl font-bold font-serif text-orange-600 bg-white px-6 py-2 rounded-lg shadow-sm border border-slate-200 select-none">
                     {captcha.a} + {captcha.b} = ?
                   </div>
                   <input 
@@ -187,7 +196,7 @@ const Contact: React.FC = () => {
                     required
                     value={formData.captchaInput}
                     onChange={handleChange}
-                    className="flex-grow px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                    className="flex-grow px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all"
                     placeholder="Result"
                   />
                 </div>
@@ -196,7 +205,7 @@ const Contact: React.FC = () => {
               <button 
                 type="submit" 
                 disabled={status === 'loading'}
-                className="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-indigo-700 transition-all disabled:opacity-50"
+                className="w-full bg-orange-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-orange-700 transition-all disabled:opacity-50"
               >
                 {status === 'loading' ? (
                   <>

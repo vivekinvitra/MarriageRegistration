@@ -1,144 +1,127 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ShieldCheck, Clock, Users, Star, ArrowRight } from 'lucide-react';
+import { CheckCircle, ShieldCheck, Star, ArrowRight, Flower2, Sparkles } from 'lucide-react';
 import { SERVICES, TESTIMONIALS } from '../constants';
 
 const Home: React.FC = () => {
   return (
     <div className="bg-white">
-      {/* Page Banner / Hero Section */}
-      <section className="relative h-[600px] flex items-center overflow-hidden">
+      {/* Hero Section: Fresh Flower Theme with Vibrant Banner */}
+      <section className="relative h-[650px] flex items-center overflow-hidden bg-jasmine">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2070&auto=format&fit=crop" 
-            alt="Marriage Background" 
-            className="w-full h-full object-cover"
+            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop" 
+            alt="Vibrant Indian Wedding Flowers - Marigold and Roses" 
+            className="w-full h-full object-cover opacity-80"
           />
-          <div className="absolute inset-0 bg-indigo-900/70 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#fffcf2] via-[#fffcf2]/80 to-transparent"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
-              Legalize Your Love <br />With Ease
+            <div className="flex items-center gap-2 text-orange-600 mb-4 font-bold tracking-widest text-sm uppercase">
+              <Sparkles size={18} /> Vivah Panjiyan Legal Services
+            </div>
+            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-[1.1] text-orange-950">
+              The Sacred Path to your <span className="text-orange-500 italic">Official Union</span>
             </h1>
-            <p className="text-xl text-indigo-100 mb-8 leading-relaxed">
-              Leading Advocate services for Marriage Registration and Court Marriage in Pune. Professional, transparent, and completely legal processing.
+            <p className="text-xl text-slate-700 mb-10 leading-relaxed font-medium">
+              We translate your traditional vows into legally binding commitments. Trusted advocate services for Marriage Registration in Pune.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                to="/contact" 
-                className="bg-indigo-500 hover:bg-indigo-400 text-white px-8 py-4 rounded-lg font-bold text-center transition-all shadow-lg flex items-center justify-center gap-2"
+              <a 
+                href="tel:+918888888888" 
+                className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-5 rounded-2xl font-bold text-center transition-all shadow-xl shadow-orange-200 flex items-center justify-center gap-3 text-lg"
               >
-                Book Appointment <ArrowRight size={20} />
-              </Link>
+                Get Expert Advice <ArrowRight size={20} />
+              </a>
               <Link 
                 to="/services" 
-                className="bg-white text-indigo-900 hover:bg-slate-100 px-8 py-4 rounded-lg font-bold text-center transition-all shadow-lg"
+                className="bg-white hover:bg-orange-50 text-orange-600 border border-orange-200 px-10 py-5 rounded-2xl font-bold text-center transition-all shadow-sm"
               >
-                Our Services
+                View Services
               </Link>
-            </div>
-            
-            <div className="mt-12 flex items-center gap-8 text-indigo-200">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="text-indigo-400" size={20} />
-                <span>100% Legally Valid</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="text-indigo-400" size={20} />
-                <span>Secure Data</span>
-              </div>
             </div>
           </div>
         </div>
+
+        {/* Floating Decorative Flowers Icon */}
+        <div className="absolute top-20 right-[10%] text-orange-500/20 animate-pulse hidden lg:block">
+          <Flower2 size={150} strokeWidth={1} />
+        </div>
       </section>
 
-      {/* Services Table */}
-      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-4">Our Marriage Services</h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
-            Comprehensive legal assistance for all types of marriage documentation and registration in Pune.
+      {/* Categories Grid: Fresh Flower Aesthetic */}
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-20">
+          <div className="w-16 h-1 bg-orange-500 mx-auto mb-6 rounded-full"></div>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-orange-950 mb-6">Marriage Registration Categories</h2>
+          <p className="text-slate-500 max-w-2xl mx-auto font-medium text-lg italic">
+            "Legal precision meets personal care. Let us handle the bureaucracy while you plan the celebrations."
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
-          <table className="w-full text-left">
-            <thead className="bg-slate-50">
-              <tr>
-                <th className="px-6 py-4 text-sm font-semibold text-slate-700 uppercase">Service Name</th>
-                <th className="px-6 py-4 text-sm font-semibold text-slate-700 uppercase">Description</th>
-                <th className="px-6 py-4 text-sm font-semibold text-slate-700 uppercase">Estimated Time</th>
-                <th className="px-6 py-4 text-sm font-semibold text-slate-700 uppercase">Action</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-200">
-              {SERVICES.map((service) => (
-                <tr key={service.id} className="hover:bg-slate-50 transition-colors">
-                  <td className="px-6 py-6 font-bold text-slate-900">{service.title}</td>
-                  <td className="px-6 py-6 text-slate-600 max-w-md">{service.description}</td>
-                  <td className="px-6 py-6 text-indigo-600 font-medium">{service.duration}</td>
-                  <td className="px-6 py-6">
-                    <Link to="/contact" className="text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1">
-                      Enquire Now <ArrowRight size={14} />
-                    </Link>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {SERVICES.map((service) => (
+            <div key={service.id} className="group bg-white p-10 rounded-[2.5rem] border border-orange-100 hover:border-orange-500 transition-all duration-500 shadow-sm hover:shadow-2xl hover:shadow-orange-100 relative overflow-hidden">
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-orange-50 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+                  <Flower2 size={28} />
+                </div>
+                <h3 className="text-2xl font-serif font-bold text-orange-950 mb-4 leading-snug group-hover:text-orange-600 transition-colors">{service.title}</h3>
+                <p className="text-slate-600 mb-8 font-medium leading-relaxed">{service.description}</p>
+                <div className="flex items-center justify-between mt-auto pt-6 border-t border-orange-50">
+                  <span className="text-xs font-black uppercase tracking-widest text-orange-400">{service.duration}</span>
+                  <Link to="/contact" className="text-orange-600 font-bold flex items-center gap-1 group/btn">
+                    Details <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="bg-indigo-900 py-16 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-4xl font-bold mb-2">12+</div>
-            <div className="text-indigo-300 uppercase text-xs tracking-widest">Years Experience</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold mb-2">5000+</div>
-            <div className="text-indigo-300 uppercase text-xs tracking-widest">Successful Registrations</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold mb-2">15+</div>
-            <div className="text-indigo-300 uppercase text-xs tracking-widest">Legal Experts</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold mb-2">100%</div>
-            <div className="text-indigo-300 uppercase text-xs tracking-widest">Success Rate</div>
-          </div>
+      {/* Trust Stats: Jasmine Green & Marigold Orange */}
+      <section className="bg-[#166534] py-24 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 floral-pattern pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-12 text-center relative z-10">
+          {[
+            { label: 'Successful Registrations', value: '8,500+' },
+            { label: 'Years of Practice', value: '12+' },
+            { label: 'Client Satisfaction', value: '99%' },
+            { label: 'Advocates in Team', value: '5' },
+          ].map((stat, i) => (
+            <div key={i} className="flex flex-col items-center">
+              <div className="text-5xl font-serif font-bold mb-3 text-orange-400">{stat.value}</div>
+              <div className="text-orange-100/60 font-bold text-[10px] uppercase tracking-[0.2em]">{stat.label}</div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-24 bg-slate-50">
+      {/* Testimonials: "Mogra" Style Softness */}
+      <section className="py-24 bg-jasmine/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-4">What Our Clients Say</h2>
-            <p className="text-slate-600">Hear from couples who successfully registered their marriage with us.</p>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-orange-950 mb-4">Grateful Couples</h2>
+            <div className="flex justify-center gap-2 mb-2">
+              {[...Array(5)].map((_, i) => <Star key={i} size={20} className="fill-orange-400 text-orange-400" />)}
+            </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {TESTIMONIALS.map((t) => (
-              <div key={t.id} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
-                  ))}
+              <div key={t.id} className="bg-white p-12 rounded-[3rem] shadow-xl shadow-orange-100/50 border border-orange-50 relative">
+                <div className="absolute top-8 left-8 text-orange-100">
+                   <Flower2 size={40} />
                 </div>
-                <p className="text-slate-600 italic mb-6">"{t.comment}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center font-bold text-indigo-600">
-                    {t.name.charAt(0)}
-                  </div>
-                  <div>
-                    <div className="font-bold text-slate-900">{t.name}</div>
-                    <div className="text-sm text-slate-500">{t.location}</div>
-                  </div>
+                <p className="text-slate-600 italic mb-10 text-center text-lg leading-relaxed relative z-10 font-medium">"{t.comment}"</p>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="font-bold text-orange-950 text-xl font-serif">{t.name}</div>
+                  <div className="text-[10px] text-orange-400 font-bold uppercase tracking-widest">{t.location}</div>
                 </div>
               </div>
             ))}
@@ -146,22 +129,21 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Footer Banner */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-indigo-600 rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden">
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Ready to start the registration?</h2>
-              <p className="text-indigo-100 mb-8 max-w-xl mx-auto">
-                Consult with our professional legal team today. We provide a clear roadmap and document checklist.
-              </p>
-              <Link to="/contact" className="inline-block bg-white text-indigo-600 px-10 py-4 rounded-xl font-bold hover:bg-slate-100 transition-all shadow-xl">
-                Get a Free Consultation
-              </Link>
-            </div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500 rounded-full blur-3xl opacity-30 -mr-32 -mt-32"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-700 rounded-full blur-3xl opacity-30 -ml-32 -mb-32"></div>
+      {/* Fresh CTA Section */}
+      <section className="py-24 px-4">
+        <div className="max-w-5xl mx-auto bg-orange-500 rounded-[4rem] p-12 md:p-24 text-center text-white shadow-2xl shadow-orange-200 relative overflow-hidden">
+          <div className="relative z-10">
+            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 leading-tight">Ready for your Special Day?</h2>
+            <p className="text-orange-50 text-xl mb-12 max-w-2xl mx-auto opacity-90 leading-relaxed font-medium">
+              Don't let document worries overshadow your joy. Consult with Pune's trusted marriage advocates today.
+            </p>
+            <a href="tel:+918888888888" className="inline-block bg-white text-orange-600 px-14 py-5 rounded-3xl font-bold text-xl hover:bg-orange-50 transition-all shadow-xl hover:scale-105 active:scale-95">
+              Consult Now • +91 88888 88888
+            </a>
           </div>
+          {/* Flower Blobs */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-orange-400/30 rounded-full blur-3xl -mr-40 -mt-40"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-rose-500/20 rounded-full blur-3xl -ml-40 -mb-40"></div>
         </div>
       </section>
     </div>
