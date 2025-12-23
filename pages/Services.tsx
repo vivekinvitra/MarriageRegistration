@@ -31,7 +31,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <div className="bg-jasmine min-h-screen">
+    <div className="bg-[#fffcf2] min-h-screen">
       {/* Services Header: Fresh Wedding Decor Banner */}
       <section className="relative py-24 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
