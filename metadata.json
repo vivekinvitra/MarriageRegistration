@@ -1,0 +1,7 @@
+{
+  "name": "Pune Marriage Registration Services",
+  "description": "Professional Advocate services for Marriage Registration and Court Marriage in Pune. Helping couples with legal documentation and processing.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
