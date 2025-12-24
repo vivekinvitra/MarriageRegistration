@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <div className="bg-white">
       {/* Hero Section: Fresh Flower Theme with Vibrant Banner */}
-      <section className="relative h-[650px] flex items-center overflow-hidden bg-[#fffcf2]">
+      <section className="relative h-[650px] flex items-center overflow-hidden bg-flower-jasmine">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop" 
@@ -103,7 +103,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Testimonials: "Mogra" Style Softness */}
-      <section className="py-24 bg-[#fffcf2]/40">
+      <section className="py-24 bg-flower-jasmine/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-orange-950 mb-4">Grateful Couples</h2>
