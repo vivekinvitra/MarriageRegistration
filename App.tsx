@@ -54,10 +54,7 @@ const Header = () => {
               >
                 {link.name}
               </Link>
-            ))}
-            <a href="tel:+918888888888" className="bg-rose-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-rose-700 transition-all shadow-md shadow-rose-100 flex items-center gap-2">
-              <Phone size={16} /> Help Desk
-            </a>
+            ))}           
           </div>
           <div className="md:hidden flex items-center">
             <button
@@ -83,10 +80,7 @@ const Header = () => {
               >
                 {link.name}
               </Link>
-            ))}
-            <a href="tel:+918888888888" className="block px-4 py-4 rounded-xl text-base font-bold text-white bg-orange-500 mt-4 text-center shadow-lg">
-              Call Support: +91 88888 88888
-            </a>
+            ))}           
           </div>
         </div>
       )}
@@ -132,11 +126,7 @@ const Footer = () => {
             <li className="flex items-start gap-4">
               <MapPin className="w-5 h-5 text-orange-400 shrink-0" />
               <span className="text-orange-100/70">Shivajinagar Court Road, Near District Court, Pune 411005</span>
-            </li>
-            <li className="flex items-center gap-4">
-              <Phone className="w-5 h-5 text-orange-400 shrink-0" />
-              <span className="font-bold text-lg">+91 88888 88888</span>
-            </li>
+            </li>          
             <li className="flex items-center gap-4">
               <Mail className="w-5 h-5 text-orange-400 shrink-0" />
               <span className="text-orange-100/70">info@marriageregistration.co.in</span>

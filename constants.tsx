@@ -11,7 +11,7 @@ export const SERVICES: Service[] = [
 
 export const NEWS: NewsItem[] = [
   {
-    id: 'n1',
+    id: 'Pune-RMO-Office-Updates-Registration-Slots',
     title: 'Pune RMO Office Updates Registration Slots',
     image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop',
     summary: 'The Pune Registrar of Marriages has announced a new online slot booking system to reduce wait times and improve efficiency.',
@@ -19,7 +19,7 @@ export const NEWS: NewsItem[] = [
     content: 'The new system aims to eliminate the long queues seen at the Haveli sub-registrar offices. Starting next Monday, all couples are required to book their time slots at least 48 hours in advance through the official MahaMarriage portal. This move is expected to streamline the physical verification process significantly.'
   },
   {
-    id: 'n2',
+    id: 'New-Digital-Signature-Requirements-for-Witnesses',
     title: 'New Digital Signature Requirements for Witnesses',
     image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop',
     summary: 'Starting next month, all witnesses must provide digital consent for marriage registration in Pune as part of the new security protocol.',
@@ -27,7 +27,7 @@ export const NEWS: NewsItem[] = [
     content: 'The Maharashtra government has introduced an Aadhaar-linked digital signature for all marriage witnesses. This enhancement ensures that the identity of the witnesses is verified in real-time, reducing the risk of fraudulent registrations. Our office provides full support in managing these digital requirements during your application.'
   },
   {
-    id: 'n3',
+    id: 'Advocate-Shinde-Honored-for-Outstanding-Legal-Service',
     title: 'Advocate Shinde Honored for Outstanding Legal Service',
     image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop',
     summary: 'Recognized for helping over 5000 couples navigate complex legal marriage hurdles in Maharashtra with integrity and professional excellence.',

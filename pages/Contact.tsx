@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
     setCaptcha({ a, b, result: a + b });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (parseInt(formData.captchaInput) !== captcha.result) {
       alert('Invalid Captcha. Please try again.');
@@ -33,6 +33,31 @@ const Contact: React.FC = () => {
 
     setStatus('loading');
     // Simulate API call
+    try {
+      const res = await fetch(
+        'https://sendemail.megha-shrivastav.workers.dev/',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            description: formData.description
+          })
+        }
+      );
+
+      if (!res.ok) throw new Error();
+
+      setStatus('success');
+    } catch {
+      alert('Failed to send message');
+      setStatus('idle');
+    }
+    
     setTimeout(() => {
       setStatus('success');
     }, 1500);
@@ -85,8 +110,7 @@ const Contact: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl flex flex-col gap-2 border border-white/20">
                 <Phone className="text-orange-400 mb-2" />
-                <div className="text-xs uppercase tracking-widest text-slate-400 font-bold">Call Support</div>
-                <div className="font-bold text-lg">+91 88888 88888</div>
+                <div className="text-xs uppercase tracking-widest text-slate-400 font-bold">Call Support</div>                
               </div>
               <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl flex flex-col gap-2 border border-white/20">
                 <Mail className="text-orange-400 mb-2" />

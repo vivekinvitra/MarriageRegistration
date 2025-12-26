@@ -31,7 +31,7 @@ const Home: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="tel:+918888888888" 
+                href="/contact" 
                 className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-5 rounded-2xl font-bold text-center transition-all shadow-xl shadow-orange-200 flex items-center justify-center gap-3 text-lg"
               >
                 Get Expert Advice <ArrowRight size={20} />
@@ -136,10 +136,7 @@ const Home: React.FC = () => {
             <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 leading-tight">Ready for your Special Day?</h2>
             <p className="text-orange-50 text-xl mb-12 max-w-2xl mx-auto opacity-90 leading-relaxed font-medium">
               Don't let document worries overshadow your joy. Consult with Pune's trusted marriage advocates today.
-            </p>
-            <a href="tel:+918888888888" className="inline-block bg-white text-orange-600 px-14 py-5 rounded-3xl font-bold text-xl hover:bg-orange-50 transition-all shadow-xl hover:scale-105 active:scale-95">
-              Consult Now • +91 88888 88888
-            </a>
+            </p>            
           </div>
           {/* Flower Blobs */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-orange-400/30 rounded-full blur-3xl -mr-40 -mt-40"></div>

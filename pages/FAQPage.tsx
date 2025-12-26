@@ -76,13 +76,7 @@ const FAQPage: React.FC = () => {
           <div className="flex-grow text-center md:text-left">
             <h4 className="text-xl font-bold text-slate-900 mb-1">Still have questions?</h4>
             <p className="text-slate-600">Our legal advisors are available to provide specific advice for your unique situation.</p>
-          </div>
-          <a 
-            href="tel:+918888888888" 
-            className="bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-indigo-700 transition-all whitespace-nowrap shadow-md shadow-indigo-200"
-          >
-            Call Us Now
-          </a>
+          </div>          
         </div>
       </section>
     </div>
